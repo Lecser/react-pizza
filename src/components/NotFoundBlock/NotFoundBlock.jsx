@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./NotFound.module.scss";
+
 export const NotFoundBlock = () => {
   return (
     <div className={classes.root}>
