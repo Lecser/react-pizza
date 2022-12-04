@@ -1,4 +1,6 @@
-function Categories({ value, onChangeCategory }) {
+const Categories = (props) => {
+  const { onClickCategoryId, categoryId } = props;
+
   const categories = [
     "Все",
     "Мясные",
@@ -14,8 +16,8 @@ function Categories({ value, onChangeCategory }) {
         {categories.map((categoryName, index) => (
           <li
             key={index}
-            onClick={() => onChangeCategory(index)}
-            className={value === index ? "active" : ""}
+            onClick={() => onClickCategoryId(index)}
+            className={categoryId === index ? "active" : ""}
           >
             {categoryName}
           </li>
@@ -23,6 +25,6 @@ function Categories({ value, onChangeCategory }) {
       </ul>
     </div>
   );
-}
+};
 
 export default Categories;

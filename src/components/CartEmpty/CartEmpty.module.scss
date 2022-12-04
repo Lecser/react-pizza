@@ -1,0 +1,16 @@
+.cartEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 0;
+
+  img {
+    width: 300px;
+    height: 255px;
+  }
+  p {
+    font-size: 18px;
+    word-break: break-word;
+  }
+}

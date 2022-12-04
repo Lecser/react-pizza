@@ -21,8 +21,9 @@
   &__logo {
     display: flex;
 
-    img {
+    .PizzaLogoIcon {
       margin-right: 15px;
+      width: 38px;
     }
 
     h1 {
