@@ -17,7 +17,7 @@ export const Cart = () => {
   const clearCartHandler = () => {
     dispatch(clearCart());
   };
-  return !cartItems.length > 0 ? (
+  return !cartItems.length ? (
     <CartEmpty />
   ) : (
     <div className="container container--cart">

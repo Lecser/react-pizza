@@ -1,6 +1,5 @@
 import React from "react";
 import emptyCartImg from "../../assets/img/empty-cart.png";
-import classes from "./CartEmpty.module.scss";
 import { Link } from "react-router-dom";
 
 export const CartEmpty = () => {
@@ -8,8 +7,9 @@ export const CartEmpty = () => {
     <div className={"cart cart--empty"}>
       <h2>Корзина пустая 😕</h2>
       <p>
-        Вероятней всего, вы не заказывали ещё пиццу. Для того, чтобы заказать
-        пиццу, перейди на главную страницу.
+        Вероятней всего, вы не добавили пиццу в корзину.
+        <br />
+        Для того, чтобы добавить пиццу, вернитесь на главную страницу.
       </p>
       <img src={emptyCartImg} alt="emptyCartImg" />
       <Link to={"/"} className={"button button--black"}>

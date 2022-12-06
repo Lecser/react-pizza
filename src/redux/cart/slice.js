@@ -12,16 +12,14 @@ export const cartSlice = createSlice({
   reducers: {
     addItem(state, action) {
       const findItem = state.cartItems.find((i) => i.id === action.payload.id);
-      if (findItem) {
-        findItem.quantity++;
-      } else {
-        state.cartItems.push({ ...action.payload, quantity: 1 });
-      }
+      findItem
+        ? findItem.quantity++
+        : state.cartItems.push({ ...action.payload, quantity: 1 });
       state.totalPrice = calcTotalPrice(state.cartItems);
     },
     minusItem(state, action) {
       const findItem = state.cartItems.find((i) => i.id === action.payload);
-      findItem.quantity--;
+      findItem && findItem.quantity--;
       state.totalPrice = calcTotalPrice(state.cartItems);
     },
     removeItem(state, action) {

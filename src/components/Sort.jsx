@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectFilterSort } from "../redux/filter/selectors";
+import { selectSort } from "../redux/filter/selectors";
 import { setSort } from "../redux/filter/slice";
 import { ReactComponent as ArrowIcon } from "../assets/img/arrow-top.svg";
 
@@ -12,7 +12,7 @@ export const sortList = [
 
 function Sort() {
   const [open, setOpen] = useState(false);
-  const { name, sortProperty } = useSelector(selectFilterSort);
+  const { name, sortProperty } = useSelector(selectSort);
   const dispatch = useDispatch();
 
   const onClickListItem = (listObj) => {

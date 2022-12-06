@@ -53,10 +53,7 @@ function PizzaBlock(props) {
           </ul>
         </div>
         <div className="pizza-block__bottom">
-          <div className="pizza-block__price">
-            от
-            {price} ₽
-          </div>
+          <div className="pizza-block__price">от {price} ₽</div>
           <button
             onClick={addCartItemHandler}
             className="button button--outline button--add"
